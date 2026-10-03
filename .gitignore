@@ -1,0 +1,26 @@
+# Linux kernel module build files
+*.o
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+*.symvers
+*.order
+
+# Kernel build directory
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+
+# Generated dependency files
+*.d
+
+# Editor / temporary files
+*~
+*.swp
+*.swo
+
+# Debug / crash dumps
+*.log
+core
