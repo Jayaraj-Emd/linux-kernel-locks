@@ -9,17 +9,17 @@ MODULE_AUTHOR("Jayaraj");
 
 static ATOMIC_NOTIFIER_HEAD(atomic);
 
-int CallBackFuntionA(struct notifier_block *nb,unsigned long action,void *data);
-int CallBackFuntionB(struct notifier_block *nb,unsigned long action,void *data);
+static int CallBackFuntionA(struct notifier_block *nb,unsigned long action,void *data);
+static int CallBackFuntionB(struct notifier_block *nb,unsigned long action,void *data);
 
-int CallBackFuntionA(struct notifier_block *nb,unsigned long action,void *data){
+static int CallBackFuntionA(struct notifier_block *nb,unsigned long action,void *data){
 	if(action != 1)
 		return NOTIFY_DONE;
 	pr_info("CallBackFuntionA: Event = %lu,data = %d\n",action,*(int *)data);
 	return NOTIFY_OK;
 }
 
-int CallBackFuntionB(struct notifier_block *nb,unsigned long action,void *data){
+static int CallBackFuntionB(struct notifier_block *nb,unsigned long action,void *data){
 	
 	if(action != 2)
 		return NOTIFY_DONE;
